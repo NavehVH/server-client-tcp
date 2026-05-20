@@ -1,4 +1,5 @@
-# chronostate-engine
+# server-client-tcp
+
 
 A low-latency spatial synchronisation engine written in **C++20**, modelled after the network architecture of legacy side-scrolling MMORPGs (MapleStory). Multiple clients control colored squares that move across a shared 2D platform environment, with the server running as the authoritative simulation.
 
@@ -23,7 +24,8 @@ A low-latency spatial synchronisation engine written in **C++20**, modelled afte
 ## Architecture
 
 ```
-chronostate-engine/
+server-client-tcp
+/
 ├── CMakeLists.txt
 └── src/
     ├── Core/
@@ -80,8 +82,8 @@ All packets travel over a raw TCP stream with this framing:
 ### Steps
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/chronostate-engine
-cd chronostate-engine
+git clone https://github.com/YOUR_USERNAME/server-client-tcp
+cd server-client-tcp
 mkdir build && cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 cmake --build . --parallel
